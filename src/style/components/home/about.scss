@@ -1,0 +1,53 @@
+.section-about {
+    padding: 60px 0;
+    text-align: left;
+    @include respond-to($md){
+        padding: 100px 0;
+    }
+    @include respond-to($xl){
+        padding-top: 165px;
+        padding-bottom: 135px;
+    }
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .team {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 40px;
+        @include respond-to($md) {
+            text-align: left;
+            margin-bottom: 0;
+            width: 35%;
+        }
+        @include respond-to($lg) {
+            padding-left: 60px;
+        }
+    }
+    .list-team {
+        display: inline-block;
+        vertical-align: top;
+        background: $yellow;
+        padding: 41px 45px 33px 47px;
+        text-align: center;
+    }
+    .tasks {
+        width: 100%;
+        text-align: center;
+        @include respond-to($md) {
+            text-align: left;
+            width: 65%;
+            padding-left: 75px;
+        }
+        p {
+            margin-bottom: 45px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .title-task {
+        margin-bottom: 8px;
+    }
+}

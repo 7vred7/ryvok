@@ -1,0 +1,121 @@
+.menu-header {
+    font-size: 11px;
+    letter-spacing: 2.2px;
+    flex-shrink: 0;
+    text-transform: uppercase;
+    @media all and (max-width: 992px) {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+
+        background: rgba(255, 255, 255, .95);
+        color: $secondary;
+        margin: 0;
+        padding: 40px 25px;
+        text-align: center;
+
+        transform: translateY(-100%);
+        transition: .8s ease;
+        z-index: 9999;
+
+        &.open {
+            transform: translateY(0);
+            .menu {
+                display: block;
+                font-size: 14px;
+            }
+        }
+    }
+    @include respond-to($xl) {
+        flex-grow: 1;
+        flex-shrink: 1
+    }
+    .menu {
+        display: none;
+        @include respond-to($lg) {
+            text-align: right;
+            display: block;
+        }
+    }
+    .menu-item {
+        display: block;
+        margin: 30px 0;
+        @include respond-to($lg) {
+            display: inline-block;
+            margin: 0 0 0 35px;
+            @include respond-to($xl) {
+                margin-left: 75px;
+            }
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+    .link-menu {
+        position: relative;
+        display: inline-block;
+        padding: 5px 10px;
+        transition: .35s;
+        &:after {
+            position: absolute;
+            content: "";
+            display: block;
+            background: $yellow-100;
+            width: 100%;
+            left: 0;
+            right: 0;
+            height: 3px;
+            z-index: 1;
+            margin: 0 auto;
+            transition: width 0.3s ease-in-out;
+        }
+        &:hover:after {
+            width: 45px;
+            margin: 0 auto;
+        }
+        &:hover,
+        &:focus {
+            @include respond-to($lg){
+                color: $yellow-100;
+            }
+        }
+    }
+    .active {
+        @media all and (max-width: 991px){
+            color: $secondary;
+            background: #ffef1a;
+        }
+        color: $yellow-100;
+    }
+    .close-menu {
+        position: absolute;
+        top: 0;
+        right: 30px;
+        background: transparent;
+        border: none;
+        padding: 13px 10px;
+        color: inherit;
+        font-size: 50px;
+        cursor: pointer;
+        @include respond-to($lg) {
+            display: none;
+        }
+    }
+}
+
+.on-scroll {
+    .active {
+        color: $secondary;
+        background: #ffef1a;
+    }
+    .link-menu:focus,
+    .link-menu:hover {
+        color: $secondary;
+    }
+}

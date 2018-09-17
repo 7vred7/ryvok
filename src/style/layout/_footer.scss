@@ -1,0 +1,189 @@
+.we-make {
+    text-align: center;
+    margin-top: 100px;
+    position: relative;
+    @include respond-to($lg){
+        margin-top: 130px;
+    }
+}
+
+.we-make > div:not(.foo-logo) {
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.we-make svg {
+    width: 100%;
+    height: auto;
+}
+
+svg #stroke .text {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    stroke-width: 3;
+    stroke: black;
+    fill: none;
+}
+
+.we-make.animate svg #stroke .text, .we-make.animate svg #stroke .st3 {
+    animation: handwrite 1.5s ease-in-out forwards;
+}
+
+@keyframes handwrite {
+    0% {
+        stroke-dashoffset: 1000;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        stroke-width: 3;
+    }
+}
+
+svg #highlight .bg {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    stroke-width: 20;
+    stroke: #FFDD00;
+    fill: none;
+}
+
+.we-make svg .highNew {
+    stroke-dashoffset: 1000;
+}
+
+.we-make.animate svg #highlight .bg, .we-make.animate svg .highNew {
+    animation: highlight 1s ease-in-out forwards .7s;
+}
+
+@keyframes highlight {
+    0% {
+        stroke-dashoffset: 1000;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+#svg-wrapper-intro {
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+#svg-wrapper-intro svg {
+    width: 100%;
+}
+
+#svg-wrapper-intro svg .st3 {
+    stroke-dasharray: 1000;
+    stroke: black;
+    fill: none;
+    stroke-dashoffset: 0;
+    stroke-width: 3;
+}
+
+#svg-wrapper-intro svg .st0 {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    stroke-width: 50;
+    stroke: #FFDD00;
+    fill: none;
+    animation: highlight 2s ease-in-out forwards 500ms;
+}
+
+#svg-wrapper-closer svg .st3 {
+    stroke-dasharray: 1000;
+    stroke-width: 3;
+    stroke: black;
+    fill: none;
+    stroke-dashoffset: 0;
+}
+
+#svg-wrapper-closer svg .st0 {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    stroke-width: 50;
+    stroke: #FFDD00;
+    fill: none;
+}
+
+.we-make.animate #svg-wrapper-closer svg .st3 {
+    animation: handwrite 1.5s ease-in-out forwards;
+}
+
+.we-make.animate #svg-wrapper-closer svg .st0 {
+    animation: highlight 1s ease-in-out forwards .7s;
+}
+
+#svg-wrapper-interesting svg .st3 {
+    stroke-dasharray: 1000;
+    stroke: black;
+    fill: none;
+    stroke-dashoffset: 0;
+    stroke-width: 3;
+}
+
+#svg-wrapper-interesting svg .st0 {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    stroke-width: 50;
+    stroke: #FFDD00;
+    fill: none;
+}
+
+.we-make.animate #svg-wrapper-interesting svg .st3 {
+    animation: handwrite 1.5s ease-in-out forwards;
+}
+
+.we-make.animate #svg-wrapper-interesting svg .st0 {
+    animation: highlight 1s ease-in-out forwards .7s;
+}
+
+/* adding new link */
+
+.link_to_go_back {
+    display: block;
+    text-decoration: underline;
+    color: #367bb5;
+    text-align: center;
+    font-family: 'RalewayRegular', sans-serif;
+    font-size: 26px;
+    line-height: .9em !important;
+    position: relative;
+    margin: 88px 0 82px;
+}
+
+.link_to_go_back a {
+    position: relative;
+    display: inline-block;
+    text-decoration: underline;
+    padding-bottom: 6px;
+}
+
+.link_to_go_back svg {
+    width: 40px;
+    height: 14px;
+    position: relative;
+    left: -8px;
+}
+
+.link_to_go_back svg line {
+    stroke-width: 1.4px;
+    fill: none;
+    stroke-linecap: round;
+    stroke: #367bb5;
+}
+
+.we-make > .foo-logo {
+    width: 44px !important;
+    margin: 50px auto 0 !important;
+}
+
+.foo-logo img {
+    width: 100%;
+}

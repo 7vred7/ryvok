@@ -1,0 +1,126 @@
+/* This used to work for the parent element of button divs */
+/* But it does not work with newer browsers, the below doesn't hide the play button parent div */
+
+*::-webkit-media-controls-panel {
+    display: none!important;
+    -webkit-appearance: none;
+}
+
+/* Old shadow dom for play button */
+
+*::-webkit-media-controls-play-button {
+    display: none!important;
+    -webkit-appearance: none;
+}
+
+/* New shadow dom for play button */
+
+/* This one works! */
+
+*::-webkit-media-controls-start-playback-button {
+    display: none!important;
+    -webkit-appearance: none;
+}
+
+.wrapper {
+    overflow: hidden;
+}
+
+body {
+    background: $primary;
+    color: $secondary;
+}
+
+body + div {
+    display: none !important;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: top;
+    height: auto;
+    user-select: none;
+}
+
+.clearfix:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.clear {
+    clear: left;
+}
+
+.d-iblock {
+    display: inline-block;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+.section {
+    text-align: center;
+}
+
+.title-section {
+    margin-bottom: 30px;
+    @include respond-to($lg) {
+        margin-bottom: 60px;
+    }
+}
+
+.text-content {
+    width: 100%;
+    max-width: 725px;
+    margin: 0 auto 35px;
+    @include respond-to($lg) {
+        margin: 0 auto 65px;
+    }
+    p {
+        margin-bottom: 15px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.link-to-site {
+    display: inline-block;
+    color: $blue;
+    text-decoration: underline;
+    &-big {
+        margin-bottom: 20px;
+        @include respond-to($lg){
+            margin-bottom: 55px;
+        }
+    }
+}
+
+.bold-text {
+    font-weight: 700;
+    line-height: 2;
+}
+
+.browser-head {
+    width: 100%;
+}
+
+.browser-line,
+.img-video,
+.video {
+    display: block;
+    width: 100%;
+}
+.video {
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+
+

@@ -1,0 +1,55 @@
+body {
+    font-family: $primary-font;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 1.63;
+    letter-spacing: 0.8px;
+    @include respond-to($sm){
+        font-size: 16px;
+    }
+    @include respond-to($md){
+        font-size: 19px;
+    }
+}
+
+.page-title {
+    font-size: 9px;
+    font-weight: 600;
+    line-height: 1.68;
+    letter-spacing: 1.1px;
+    @include respond-to($md){
+        font-size: 11px;
+    }
+}
+
+.title-section {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+    @include respond-to($sm){
+         font-size: 25px;
+     }
+    @include respond-to($lg) {
+        font-size: 33px;
+    }
+}
+
+.link-to-site-big {
+    font-size: 18px;
+    line-height: 1.41;
+    letter-spacing: 0.9px;
+    @include respond-to($md){
+        font-size: 22px;
+    }
+}
+
+.title-task {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: 0.2px;
+    @include respond-to($md){
+        font-size: 22px;
+    }
+}

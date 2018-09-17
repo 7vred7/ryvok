@@ -1,0 +1,80 @@
+.section-about-book {
+    .block-video {
+        position: relative;
+        margin-bottom: 70px;
+        @include respond-to($lg) {
+            margin-bottom: 140px;
+        }
+    }
+    .container-video {
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin: -4px 0 150px;
+        @include respond-to($lg) {
+            margin-bottom: 0;
+        }
+    }
+    .img-phone {
+        position: relative;
+        display: block;
+        max-width: none;
+        width: 100%;
+        z-index: 5;
+    }
+    .phone-wrap-left {
+        position: absolute;
+        width: 50%;
+        max-width: 213px;
+        height: auto;
+        overflow: hidden;
+        transform: translateY(0%);
+        transition: 0.45s ease-out;
+        opacity: 0;
+        @include respond-to($md) {
+            left: -10px;
+            bottom: -75%;
+        }
+        @include respond-to($lg) {
+            left: -10px;
+            bottom: -95%;
+        }
+        &.updown {
+            transition-timing-function: ease-out;
+            //transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
+            transform: translateY(-140%);
+            opacity: 1;
+            @media all and (orientation:landscape) and (max-width: 900px){
+                transform: translateY(-105%);
+            }
+            @include respond-to($lg) {
+                transform: translateY(-110%);
+            }
+            @include respond-to($xl) {
+                transform: translateY(-160%);
+            }
+        }
+    }
+    .wrap-media {
+        position: relative;
+    }
+    .container-phone {
+        position: relative;
+        width: 50%;
+        overflow: hidden;
+        text-align: left;
+        @include respond-to($md){
+            width: 100%;
+            max-width: 213px;
+            height: 434px;
+        }
+    }
+    .video-phone {
+        position: absolute;
+        left: 5%;
+        top: 11%;
+        width: 92%;
+        height: auto;
+        z-index: 3;
+    }
+}

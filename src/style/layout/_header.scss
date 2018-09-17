@@ -1,0 +1,102 @@
+.header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    background: transparent;
+    color: $primary;
+    padding: 30px 0;
+    transition: background-color .5s, padding .5s;
+    z-index: 2000;
+    @media all and (max-width: 991px) {
+        .container {
+            width: 100%;
+            max-width: none;
+        }
+    }
+    .container {
+        display: flex;
+        align-items: center;
+        @include respond-to($lg) {
+            justify-content: flex-start;
+        }
+    }
+    .logo {
+        display: block;
+        width: 47px;
+        height: 37px;
+        margin-right: 10px;
+        flex-shrink: 0;
+        align-self: center;
+        @include respond-to($md) {
+            width: 50px;
+            height: 41px;
+        }
+        &-img {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-width: none;
+            &-scroll {
+                display: none;
+                width: 100%;
+                height: auto;
+                max-width: none;
+            }
+        }
+    }
+
+    .page-title {
+        text-transform: uppercase;
+        text-shadow: 1.1px 1.6px 0 rgba(13, 13, 13, 0.39);
+    }
+}
+
+.burger {
+    background: $yellow;
+    border: 1px solid #575656;
+    padding: 13px 10px;
+    cursor: pointer;
+    outline: none;
+    margin-left: auto;
+    flex-shrink: 0;
+    .line {
+        display: block;
+        width: 25px;
+        height: 2px;
+        background-color: #575656;
+        margin-bottom: 3px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    @include respond-to($lg) {
+        display: none;
+    }
+}
+
+.on-scroll {
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    background: $primary;
+    color: #555;
+    padding: 10px 0;
+    .page-title {
+        text-shadow: none;
+        display: none;
+        @include respond-to($md) {
+            display: block;
+        }
+    }
+    .logo {
+        width: 28px;
+        height: 22px;
+        align-self: center;
+        &-img {
+            display: none;
+            &-scroll {
+                display: block;
+            }
+        }
+    }
+}

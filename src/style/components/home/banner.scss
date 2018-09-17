@@ -1,0 +1,115 @@
+.section-banner {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    .banner-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        background: url(../assets/img/bg-banner.jpg) center center no-repeat;
+        -webkit-background-size: cover;
+        background-size: cover;
+        z-index: 1;
+        &:after {
+            position: absolute;
+            content: "";
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            background: #000;
+            opacity: .5;
+            z-index: 3;
+        }
+    }
+    .book-bg {
+        height: 130%;
+        background: url("../assets/img/book.jpg") right center no-repeat;
+        background-size: cover;
+    }
+    .block-lg {
+        width: 50%;
+        height: 100%;
+    }
+    .block-images {
+        max-width: 730px;
+        height: 130%;
+        padding-left: 7.4%;
+        img{
+            display: block;
+        }
+    }
+    .block-max {
+        width: 100%;
+        position: absolute;
+        height: 100%;
+        left: 0;
+        bottom: 0;
+        z-index: 2;
+        img {
+            position: relative;
+            display: block;
+            left: 50%;
+            transform: translateX(-50%);
+            width: auto;
+            max-width: none;
+            height: 125%;
+        }
+    }
+    .container {
+        position: relative;
+        display: table;
+        height: 100vh;
+        padding-top: 100px;
+        padding-bottom: 50px;
+        z-index: 2;
+        @include respond-to($lg){
+            padding-bottom: 100px;
+        }
+    }
+    .section-text-wrap {
+        display: table-cell;
+        vertical-align: bottom;
+    }
+    .banner-text {
+        width: 100%;
+        font-size: 20px;
+        padding: 15px;
+        text-align: center;
+        margin: 0 auto;
+        color: $primary;
+        line-height: 1.45;
+        @include respond-to($md) {
+            width: 75%;
+        }
+        @include respond-to($lg) {
+            width: 45%;
+            text-align: left;
+            padding-top: 30px ;
+            padding-bottom: 30px;
+            margin: 0 0 0 auto;
+            font-size: 26px;
+        }
+        @include respond-to($xl) {
+            font-size: 32px;
+        }
+    }
+    .img-wrap{
+        max-width: 50%;
+        float: left;
+        margin-bottom: 20px;
+        img {
+            display: inline-block;
+            max-width: 100%;
+            height: auto;
+            vertical-align: middle;
+            margin-left: 20px;
+        }
+    }
+    .b-width{
+        max-width: 80%;
+    }
+}
